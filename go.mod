@@ -33,6 +33,7 @@ require (
 	github.com/prometheus/client_golang v0.8.0 // indirect
 	github.com/prometheus/common v0.0.0-20180801064454-c7de2306084e // indirect
 	github.com/prometheus/procfs v0.0.0-20180920065004-418d78d0b9a7 // indirect
+	github.com/sirupsen/logrus v1.8.1 // indirect
 	github.com/spf13/cast v1.4.0 // indirect
 	github.com/spf13/viper v1.8.1 // indirect
 	github.com/ugorji/go v1.2.6 // indirect
