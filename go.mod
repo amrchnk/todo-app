@@ -21,6 +21,8 @@ require (
 	github.com/gotestyourself/gotestyourself v2.1.0+incompatible // indirect
 	github.com/jackc/fake v0.0.0-20150926172116-812a484cc733 // indirect
 	github.com/jackc/pgx v3.2.0+incompatible // indirect
+	github.com/jmoiron/sqlx v1.3.4 // indirect
+	github.com/joho/godotenv v1.3.0 // indirect
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/kshvakov/clickhouse v1.3.4 // indirect
 	github.com/mattn/go-isatty v0.0.13 // indirect
