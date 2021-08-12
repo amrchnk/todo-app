@@ -18,7 +18,7 @@ const (
 
 type tokenClaims struct{
     jwt.StandardClaims
-    UserID int `json:"user_id"`
+    UserId int `json:"user_id"`
 }
 
 type AuthService struct{
@@ -52,7 +52,7 @@ func (s *AuthService) GenerateToken(username,password string)(string,error){
 }
 
 func (s *AuthService)ParseToken(accessToken string)(int,error){
-    token,err:=jwt.ParseWithClaims(accessToken,&tokenClaims{},func(token,*jwt.Token)(interface{},error){
+    token,err:=jwt.ParseWithClaims(accessToken,&tokenClaims{},func(token *jwt.Token)(interface{},error){
         if _,ok:=token.Method.(*jwt.SigningMethodHMAC);!ok{
             return nil,errors.New("Invalid signing method")
         }

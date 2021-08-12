@@ -11,7 +11,7 @@ type Authorization interface{
 }
 
 type TodoList interface{
-
+    Create(userId int,list todo.TodoList)
 }
 
 type TodoItem interface{
