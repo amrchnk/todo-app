@@ -24,7 +24,7 @@ func (h *Handler) InitRoutes() *gin.Engine{
     }
 
     //endpoints for working with lists and todos
-    api:=router.Group("/api")
+    api:=router.Group("/api",h.userIdentity)
     {
         //lists routes
         lists:=api.Group("/lists")
