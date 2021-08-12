@@ -33,6 +33,7 @@ func (s *AuthService) CreateUser(user todo.User)(int,error){
     return s.repo.CreateUser(user)
 }
 
+//generate new token after receiving username and password
 func (s *AuthService) GenerateToken(username,password string)(string,error){
     user,err:=s.repo.GetUser(username,generatePasswordHash(password))
     if err!=nil{

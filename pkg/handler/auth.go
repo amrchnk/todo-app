@@ -24,6 +24,7 @@ func (h *Handler) signUp(c *gin.Context){
     })
 }
 
+//make a new structure for parsing user's request
 type signInInput struct{
     Username string `json:"username" binding:"required"`
     Password string `json:"password" binding:"required"`
