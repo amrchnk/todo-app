@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="989510a1-2caf-4a1a-acbb-d3747546b2ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pkg/repository/todo_item_postgres.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/service/todo_item.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/handler/list.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/handler/list.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/handler/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/handler/middleware.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/handler/response.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/handler/response.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/handler/handler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/handler/item.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/handler/item.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/repository/repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/repository/repository.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/repository/todo_list_postgres.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/repository/todo_list_postgres.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/service/service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/service/todo_list.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/service/todo_list.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo.go" beforeDir="false" afterPath="$PROJECT_DIR$/todo.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +48,7 @@
       <workItem from="1628510907819" duration="1383000" />
       <workItem from="1628512380207" duration="6174000" />
       <workItem from="1628531741573" duration="48822000" />
-      <workItem from="1628835002987" duration="5055000" />
+      <workItem from="1628835002987" duration="14108000" />
     </task>
     <servers />
   </component>

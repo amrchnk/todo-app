@@ -89,5 +89,4 @@ func (r *TodoListPostgres)Update(userId,listId int,input todo.UpdateListInput)er
 
     _,err:=r.db.Exec(query,args...)
     return err
-
 }
