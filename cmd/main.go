@@ -10,6 +10,9 @@ import (
     "github.com/joho/godotenv"
     "github.com/sirupsen/logrus"
     "os"
+    "os/signal"
+    "syscall"
+    "context"
 )
 
 func main(){
@@ -39,8 +42,25 @@ func main(){
     handlers:=handler.NewHandler(services)
 
     srv:=new(todo.Server)
-    if err:=srv.Run(viper.GetString("port"),handlers.InitRoutes());err!=nil{
-        logrus.Fatalf("Error with runing http-server: %s",err.Error())
+    go func(){
+        if err:=srv.Run(viper.GetString("port"),handlers.InitRoutes());err!=nil{
+            logrus.Fatalf("Error with runing http-server: %s",err.Error())
+        }
+    }()
+
+    logrus.Print("App is started...")
+
+    quit:=make(chan os.Signal,1)
+    signal.Notify(quit,syscall.SIGTERM,syscall.SIGINT)
+    <- quit
+    logrus.Print("App is finished...")
+
+    if err:=srv.Shutdown(context.Background());err!=nil{
+        logrus.Errorf("error occured on server: %s",err.Error())
+    }
+
+    if err:=db.Close();err!=nil{
+        logrus.Errorf("error occured on db connection: %s",err.Error())
     }
 }
 
