@@ -27,7 +27,19 @@
 <script>
 
 export default {
-  name: "Auth"
+  name: "Auth",
+  data() {
+    return {
+      address: "http://localhost:8000",
+      user: {
+        id: '',
+        full_name: '',
+        email: '',
+        password:'',
+        error:''
+      }
+    }
+  }
 }
 </script>
 

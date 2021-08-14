@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header/>
+
     <router-view/>
   </div>
 </template>
@@ -12,15 +13,15 @@ export default {
   name: 'App',
   components: {
     Header
+  },
+  data() {
+    return {
+      cookie: document.cookie
+    }
+  },
+  beforeUpdate() {
+    this.cookie = document.cookie
   }
-  // data() {
-  //   return {
-  //     cookie: document.cookie
-  //   }
-  // },
-  // beforeUpdate() {
-  //   this.cookie = document.cookie
-  // }
 }
 </script>
 

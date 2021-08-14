@@ -9,20 +9,20 @@
 
           <div class="field">
             <label class="form-label">Имя пользователя</label>
-            <input class="form-control" id="exampleInputEmail1">
+            <input class="form-control" id="exampleInputEmail1" v-model="user.name">
           </div>
 
           <div class="field">
             <label class="form-label">Логин</label>
-            <input class="form-control" id="exampleInputEmail1">
+            <input class="form-control" id="exampleInputEmail1" v-model="user.username">
           </div>
 
           <div class="field">
             <label class="form-label">Пароль</label>
-            <input class="form-control" id="exampleInputPassword" type="password">
+            <input class="form-control" id="exampleInputPassword" type="password" v-model="user.password">
           </div>
           <div class="others">
-            <button>Зарегистрироваться</button>
+            <button  @click="reg">Зарегистрироваться</button>
             <router-link class="rl link" to="/">Назад ко входу</router-link>
           </div>
         </div>
@@ -33,7 +33,34 @@
 
 <script>
 export default {
-  name: "Reg"
+  name: "Reg",
+  data() {
+    return {
+      address: "http://localhost:8000",
+      user: {
+        name: "",
+        username: "",
+        password: ""
+      },
+      answer: {}
+    }
+  },
+  methods:{
+    async reg(){
+      await this.$http.post(`${this.address}/auth/sign-up`, this.user) //по JSON RPC запросы идут только через POST
+          .then((res) => res.json()).then((res) => (this.answer = res.result)); //ответ берем обязательно из res.result
+      console.log(this.user);
+      // if (this.user.name.length > 0 && this.user.username.length > 0 && this.user.password.length > 0) {
+      //   this.$http.post(`${this.address}/auth/sign-up`, request).success(function(res) {
+      //     console.log(res)
+      //   }).error(function(err) {
+      //     console.log(err);
+      //   });
+        // this.$http.post(`${this.address}/auth/sign-up`, request)
+        //         .then((res) => res.json()).then((res) => (this.answer = res));
+        // console.log(this.answer
+    }
+  }
 }
 </script>
 
