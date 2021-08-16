@@ -8,14 +8,14 @@
           </div>
           <div class="field">
             <label class="form-label">Логин</label>
-            <input class="form-control" id="exampleInputEmail1">
+            <input class="form-control" id="exampleInputEmail1" v-model="user.username">
           </div>
           <div class="field">
             <label class="form-label">Пароль</label>
-            <input class="form-control" id="exampleInputPassword" type="password">
+            <input class="form-control" id="exampleInputPassword" type="password" v-model="user.password">
           </div>
           <div class="others">
-            <button>Войти</button>
+            <button @click="auth">Войти</button>
             <router-link class="rl link" to="/reg">У меня нет аккаунта</router-link>
           </div>
         </div>
@@ -30,15 +30,22 @@ export default {
   name: "Auth",
   data() {
     return {
+      cookie: document.cookie,
       address: "http://localhost:8000",
       user: {
         id: '',
-        full_name: '',
-        email: '',
-        password:'',
-        error:''
+        username: '',
+        password:''
       }
     }
+  },
+  methods:{
+    async auth(){
+
+    }
+  },
+  beforeUpdate() {
+    this.cookie = document.cookie
   }
 }
 </script>
