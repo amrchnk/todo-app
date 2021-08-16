@@ -38,6 +38,7 @@ export default {
     return {
       address: "http://localhost:8000",
       user: {
+        id:"",
         name: "",
         username: "",
         password: ""
@@ -47,18 +48,31 @@ export default {
   },
   methods:{
     async reg(){
-      await this.$http.post(`${this.address}/auth/sign-up`, this.user) //по JSON RPC запросы идут только через POST
-          .then((res) => res.json()).then((res) => (this.answer = res.result)); //ответ берем обязательно из res.result
-      console.log(this.user);
-      // if (this.user.name.length > 0 && this.user.username.length > 0 && this.user.password.length > 0) {
-      //   this.$http.post(`${this.address}/auth/sign-up`, request).success(function(res) {
-      //     console.log(res)
-      //   }).error(function(err) {
-      //     console.log(err);
-      //   });
-        // this.$http.post(`${this.address}/auth/sign-up`, request)
-        //         .then((res) => res.json()).then((res) => (this.answer = res));
-        // console.log(this.answer
+      if (this.user.name.length > 0 && this.user.username.length > 0 && this.user.password.length > 0) {
+        try{
+          await this.$http.post(`${this.address}/auth/sign-up`, this.user)
+              .then((res) => res.json()).then((res) => (this.answer=res))
+              .catch((res) => (this.answer=res["data"]));
+          // console.log(this.answer["id"]==null)
+          // console.log(this.answer["message"]==undefined)
+          if(this.answer["message"]===undefined && this.answer["id"]!=null){
+              alert("Пользователь успешно зарегестрирован в системе!")
+              await this.$router.push('/');
+          }
+          else {
+            alert("Логин занят другим пользователем")
+          }
+          this.answer={}
+        } catch (e){
+          console.log(e)
+        }
+      }
+      else{
+
+      }
+    },
+    parseData(){
+
     }
   }
 }
