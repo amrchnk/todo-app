@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Header :cookie="cookie"/>
 
     <router-view/>
   </div>

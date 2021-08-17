@@ -68,11 +68,8 @@ export default {
         }
       }
       else{
-
+        alert("Поля формы не должны быть пустыми!")
       }
-    },
-    parseData(){
-
     }
   }
 }
