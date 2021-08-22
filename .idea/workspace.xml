@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="989510a1-2caf-4a1a-acbb-d3747546b2ad" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/components/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/components/Main.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/components/Reg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/components/Reg.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/site/src/main.js" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.gitigore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitigore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/handler/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/handler/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/site/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/site/package.json" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +36,9 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1wTr0AmaOyzZ9rWNZNC4lxtyaAa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,7 +48,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="D:/ordering-products" />
+>>>>>>> master
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -54,10 +69,21 @@
       <workItem from="1628512380207" duration="6174000" />
       <workItem from="1628531741573" duration="48822000" />
       <workItem from="1628835002987" duration="16250000" />
+<<<<<<< HEAD
       <workItem from="1628857476623" duration="5907000" />
       <workItem from="1629055097635" duration="6209000" />
       <workItem from="1629107922903" duration="14772000" />
       <workItem from="1629191948840" duration="2503000" />
+=======
+      <workItem from="1628857476623" duration="8937000" />
+      <workItem from="1628875073606" duration="5292000" />
+      <workItem from="1628881590380" duration="2418000" />
+      <workItem from="1628922487620" duration="1379000" />
+      <workItem from="1628924056429" duration="88000" />
+      <workItem from="1628924429943" duration="15000" />
+      <workItem from="1628924494976" duration="14000" />
+      <workItem from="1628924750516" duration="85000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
